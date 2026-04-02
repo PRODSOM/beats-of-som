@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Archangel – S.O.M Beats</title>
+  <title>Archangel – Beats Of S.O.M</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -19,15 +19,24 @@
     }
 
     .container {
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       padding: 40px;
       border-radius: 20px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      max-width: 400px;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255,255,255,0.9);
     }
 
     audio {
@@ -42,16 +51,19 @@
       color: white;
       border-radius: 30px;
       cursor: pointer;
+      transition: 0.4s;
     }
 
     .btn:hover {
       box-shadow: 0 0 25px white;
+      transform: scale(1.05);
     }
 
     .note {
-      margin-top: 10px;
+      margin-top: 15px;
       font-size: 0.9rem;
-      opacity: 0.8;
+      opacity: 0.75;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -59,6 +71,9 @@
 <body>
 
 <div class="container">
+
+  <div class="brand">Beats Of S.O.M</div>
+
   <h1>Archangel</h1>
 
   <audio controls>
@@ -70,8 +85,11 @@
   </a>
 
   <div class="note">
-    Secure payment via PayPal • Instant download after purchase
+    Secure payment via PayPal.<br>
+    Instant access after purchase.<br>
+    High quality WAV file for professional use.
   </div>
+
 </div>
 
 </body>
