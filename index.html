@@ -20,6 +20,7 @@
       color: #f5f5f5;
     }
 
+    /* LANDING */
     .landing {
       height: 100vh;
       background: url('landing.gif') no-repeat center/cover;
@@ -60,6 +61,7 @@
       transform: scale(1.05);
     }
 
+    /* MAIN */
     .main {
       min-height: 100vh;
       background: url('main.gif') no-repeat center/cover;
@@ -77,6 +79,8 @@
     .beats {
       display: flex;
       justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     .beat-card {
@@ -91,6 +95,7 @@
     .beat-title {
       font-size: 1.6rem;
       margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
     }
 
     audio {
@@ -117,16 +122,20 @@
 
 <body>
 
+<!-- LANDING -->
 <div class="landing" id="landing">
   <h1>Beats Of S.O.M</h1>
   <div class="subtitle">Ethereal Soundscapes for The Angels on Earth</div>
   <button class="enter-btn" onclick="enterSite()">Enter</button>
 </div>
 
+<!-- MAIN -->
 <div class="main" id="main">
   <div class="header">Beats Of S.O.M</div>
 
   <div class="beats">
+
+    <!-- ARCHANGEL -->
     <div class="beat-card">
       <div class="beat-title">Archangel</div>
 
@@ -138,6 +147,20 @@
         <button class="buy-btn">BUY - $10</button>
       </a>
     </div>
+
+    <!-- AR-15 -->
+    <div class="beat-card">
+      <div class="beat-title">AR-15</div>
+
+      <audio controls>
+        <source src="ar15-preview.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="ar15-buy.html">
+        <button class="buy-btn">BUY - $10</button>
+      </a>
+    </div>
+
   </div>
 </div>
 
