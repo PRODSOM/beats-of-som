@@ -30,34 +30,47 @@
       text-align: center;
     }
 
+    /* HALO TITLE */
     .landing h1 {
       font-size: 4rem;
       letter-spacing: 3px;
-      text-shadow: 0 0 25px rgba(255,255,255,0.8);
+      text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 25px rgba(255,255,255,0.7),
+        0 0 50px rgba(255,255,255,0.5);
     }
 
+    /* YOUR MESSAGE */
     .subtitle {
       margin-top: 15px;
-      font-size: 1.2rem;
-      opacity: 0.85;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.6;
       text-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
 
+    /* ANIMATED BUTTON */
     .enter-btn {
       margin-top: 35px;
       padding: 15px 45px;
       font-size: 1.1rem;
-      border: 1px solid rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.7);
       background: rgba(0,0,0,0.4);
       color: #fff;
       cursor: pointer;
       border-radius: 30px;
       transition: 0.4s;
+      animation: pulse 3s infinite;
     }
 
     .enter-btn:hover {
-      box-shadow: 0 0 25px rgba(255,255,255,0.8);
       transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px white; }
+      50% { box-shadow: 0 0 25px white; }
+      100% { box-shadow: 0 0 5px white; }
     }
 
     .main {
@@ -70,8 +83,17 @@
     .header {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 50px;
-      text-shadow: 0 0 20px rgba(255,255,255,0.8);
+      margin-bottom: 15px;
+      text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 25px rgba(255,255,255,0.6);
+    }
+
+    .main-sub {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1rem;
+      opacity: 0.85;
     }
 
     .beats {
@@ -82,12 +104,17 @@
     }
 
     .beat-card {
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.55);
       padding: 25px;
       border-radius: 15px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       width: 300px;
       text-align: center;
+      transition: 0.3s;
+    }
+
+    .beat-card:hover {
+      transform: translateY(-5px);
     }
 
     .beat-title {
@@ -109,10 +136,10 @@
       border-radius: 30px;
       cursor: pointer;
       transition: 0.4s;
+      animation: pulse 3s infinite;
     }
 
     .buy-btn:hover {
-      box-shadow: 0 0 25px white;
       transform: scale(1.05);
     }
   </style>
@@ -122,84 +149,22 @@
 
 <div class="landing" id="landing">
   <h1>Beats Of S.O.M</h1>
-  <div class="subtitle">Ethereal Soundscapes for The Angels on Earth</div>
+
+  <div class="subtitle">
+    Welcome to our SECRET HAVEN 🕊️✨<br>
+    Grab the beats made just for you in the Stored Echoes 🌙
+  </div>
+
   <button class="enter-btn" onclick="enterSite()">Enter</button>
 </div>
 
 <div class="main" id="main">
   <div class="header">Beats Of S.O.M</div>
 
+  <div class="main-sub">
+    Curated sounds for artists who move differently.
+  </div>
+
   <div class="beats">
 
-    <!-- ARCHANGEL -->
-    <div class="beat-card">
-      <div class="beat-title">Archangel</div>
-      <audio controls><source src="archangel-preview.mp3"></audio>
-      <a href="archangel-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- AR-15 -->
-    <div class="beat-card">
-      <div class="beat-title">AR-15</div>
-      <audio controls><source src="ar15-preview.mp3"></audio>
-      <a href="ar15-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- CHROME -->
-    <div class="beat-card">
-      <div class="beat-title">Chrome</div>
-      <audio controls><source src="chrome-preview.mp3"></audio>
-      <a href="chrome-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- 777 -->
-    <div class="beat-card">
-      <div class="beat-title">777</div>
-      <audio controls><source src="777-preview.mp3"></audio>
-      <a href="777-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- E-GIRL -->
-    <div class="beat-card">
-      <div class="beat-title">E-Girl</div>
-      <audio controls><source src="egirl-preview.mp3"></audio>
-      <a href="egirl-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- MORTAL -->
-    <div class="beat-card">
-      <div class="beat-title">Mortal</div>
-      <audio controls><source src="mortal-preview.mp3"></audio>
-      <a href="mortal-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- SALIVA -->
-    <div class="beat-card">
-      <div class="beat-title">Saliva</div>
-      <audio controls><source src="saliva-preview.mp3"></audio>
-      <a href="saliva-buy.html"><button class="buy-btn">Unlock Beat – $10</button></a>
-    </div>
-
-    <!-- SALVATION -->
-    <div class="beat-card">
-      <div class="beat-title">Salvation</div>
-      <audio controls>
-        <source src="salvation-preview.mp3" type="audio/mpeg">
-      </audio>
-      <a href="salvation-buy.html">
-        <button class="buy-btn">Unlock Beat – $10</button>
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<script>
-function enterSite() {
-  document.getElementById('landing').style.display = 'none';
-  document.getElementById('main').style.display = 'block';
-}
-</script>
-
-</body>
-</html>
+    <!-- YOUR BEATS STAY EXACTLY AS THEY ARE -->
