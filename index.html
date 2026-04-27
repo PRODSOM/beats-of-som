@@ -8,177 +8,216 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Playfair Display', serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Playfair Display', serif;
     }
 
-    body, html {
-      height: 100%;
-      color: #f5f5f5;
-      scroll-behavior: smooth;
+    html, body{
+      height:100%;
+      color:white;
+      overflow-x:hidden;
+      background:black;
     }
 
-    .landing {
-      height: 100vh;
-      background: url('landing.gif') no-repeat center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
+    .landing{
+      height:100vh;
+      background:url('landing.gif') no-repeat center center/cover;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
     }
 
-    .landing h1 {
-      font-size: 4rem;
-      letter-spacing: 3px;
-      text-shadow: 0 0 25px rgba(255,255,255,0.8);
-    }
-
-    .subtitle {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      opacity: 0.85;
-      text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    }
-
-    .enter-btn {
-      margin-top: 35px;
-      padding: 15px 45px;
-      font-size: 1.1rem;
-      border: 1px solid rgba(255,255,255,0.6);
-      background: rgba(0,0,0,0.4);
-      color: #fff;
-      cursor: pointer;
-      border-radius: 30px;
-      transition: 0.4s;
-    }
-
-    .enter-btn:hover {
-      box-shadow: 0 0 25px rgba(255,255,255,0.8);
-      transform: scale(1.05);
-    }
-
-    .main {
-      min-height: 100vh;
-      background: url('main.gif') no-repeat center/cover;
-      padding: 50px;
-      display: none;
-    }
-
-    .header {
-      text-align: center;
-      font-size: 3.3rem;
-      margin-bottom: 15px;
+    .landing h1{
+      font-size:4rem;
       text-shadow:
         0 0 10px rgba(255,255,255,0.9),
         0 0 25px rgba(255,255,255,0.7),
-        0 0 45px rgba(255,255,255,0.5);
-      animation: glow 4s ease-in-out infinite alternate;
+        0 0 50px rgba(255,255,255,0.5);
+      letter-spacing:3px;
     }
 
-    @keyframes glow {
-      from {
+    .subtitle{
+      margin-top:18px;
+      font-size:1.15rem;
+      opacity:0.9;
+      text-shadow:0 0 10px rgba(255,255,255,0.6);
+    }
+
+    .enter-btn{
+      margin-top:35px;
+      padding:15px 45px;
+      border-radius:40px;
+      border:1px solid rgba(255,255,255,0.7);
+      background:rgba(0,0,0,0.35);
+      color:white;
+      font-size:1rem;
+      cursor:pointer;
+      transition:0.4s;
+      backdrop-filter:blur(8px);
+    }
+
+    .enter-btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(255,255,255,0.8);
+    }
+
+    .main{
+      min-height:100vh;
+      background:url('main.gif') no-repeat center center/cover;
+      display:none;
+      padding:50px 20px 70px;
+    }
+
+    .header{
+      text-align:center;
+      margin-bottom:18px;
+      font-size:3.2rem;
+      letter-spacing:2px;
+      text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 25px rgba(255,255,255,0.8),
+        0 0 50px rgba(255,255,255,0.5);
+      animation:glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow{
+      from{
         text-shadow:
-          0 0 10px rgba(255,255,255,0.7),
+          0 0 8px rgba(255,255,255,0.7),
           0 0 20px rgba(255,255,255,0.5);
       }
 
-      to {
+      to{
         text-shadow:
-          0 0 20px rgba(255,255,255,1),
-          0 0 40px rgba(255,255,255,0.8),
+          0 0 14px rgba(255,255,255,1),
+          0 0 35px rgba(255,255,255,0.9),
           0 0 60px rgba(255,255,255,0.6);
       }
     }
 
-    .message {
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 1.05rem;
-      opacity: 0.88;
-      letter-spacing: 1px;
-      text-shadow: 0 0 10px rgba(255,255,255,0.4);
+    .message{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:1rem;
+      opacity:0.92;
+      line-height:1.8;
+      text-shadow:0 0 10px rgba(255,255,255,0.35);
     }
 
-    .beats {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      flex-wrap: wrap;
+    .beats{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:35px;
     }
 
-    .beat-card {
-      background: rgba(0,0,0,0.55);
-      padding: 25px;
-      border-radius: 18px;
-      backdrop-filter: blur(12px);
-      width: 300px;
-      text-align: center;
-      transition: 0.5s;
+    .beat-card{
+      width:310px;
+      background:rgba(0,0,0,0.45);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:25px;
+      text-align:center;
+      backdrop-filter:blur(12px);
+      transition:0.45s;
     }
 
-    .beat-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    .beat-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 35px rgba(255,255,255,0.12);
     }
 
-    .beat-title {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+    .beat-title{
+      font-size:1.7rem;
+      margin-bottom:20px;
+      text-shadow:0 0 15px rgba(255,255,255,0.7);
     }
 
-    audio {
-      width: 100%;
-      margin-bottom: 20px;
+    audio{
+      width:100%;
+      margin-bottom:20px;
+      filter:brightness(1.1);
     }
 
-    .buy-btn {
-      padding: 12px 25px;
-      border: 1px solid white;
-      background: transparent;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.4s;
-      animation: pulse 3s infinite;
+    .buy-btn{
+      padding:14px 28px;
+      border-radius:35px;
+      border:1px solid rgba(255,255,255,0.7);
+      background:rgba(255,255,255,0.04);
+      color:white;
+      cursor:pointer;
+      font-size:1rem;
+      transition:0.4s;
+      animation:pulse 3s infinite;
     }
 
-    .buy-btn:hover {
-      box-shadow: 0 0 25px white;
-      transform: scale(1.05);
+    .buy-btn:hover{
+      transform:scale(1.06);
+      box-shadow:0 0 25px rgba(255,255,255,0.75);
     }
 
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    @keyframes pulse{
+      0%{
+        box-shadow:0 0 5px rgba(255,255,255,0.2);
       }
 
-      50% {
-        box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      50%{
+        box-shadow:0 0 22px rgba(255,255,255,0.5);
       }
 
-      100% {
-        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+      100%{
+        box-shadow:0 0 5px rgba(255,255,255,0.2);
       }
     }
+
+    @media(max-width:768px){
+
+      .landing h1{
+        font-size:2.8rem;
+      }
+
+      .header{
+        font-size:2.4rem;
+      }
+
+      .beat-card{
+        width:100%;
+        max-width:340px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
 <div class="landing" id="landing">
+
   <h1>Beats Of S.O.M</h1>
-  <div class="subtitle">Ethereal Soundscapes for The Angels on Earth</div>
-  <button class="enter-btn" onclick="enterSite()">Enter</button>
+
+  <div class="subtitle">
+    Ethereal Soundscapes for The Angels on Earth
+  </div>
+
+  <button class="enter-btn" onclick="enterSite()">
+    Enter
+  </button>
+
 </div>
 
 <div class="main" id="main">
 
-  <div class="header">Beats Of S.O.M</div>
+  <div class="header">
+    Beats Of S.O.M
+  </div>
 
   <div class="message">
     🕊️ Welcome to our SECRET HAVEN 🕊️<br>
@@ -187,7 +226,6 @@
 
   <div class="beats">
 
-    <!-- INHUMAN -->
     <div class="beat-card">
       <div class="beat-title">Inhuman</div>
       <audio controls>
@@ -198,7 +236,6 @@
       </a>
     </div>
 
-    <!-- CULT -->
     <div class="beat-card">
       <div class="beat-title">Cult</div>
       <audio controls>
@@ -209,7 +246,6 @@
       </a>
     </div>
 
-    <!-- FLUFFY -->
     <div class="beat-card">
       <div class="beat-title">Fluffy</div>
       <audio controls>
@@ -220,7 +256,6 @@
       </a>
     </div>
 
-    <!-- EMPATH -->
     <div class="beat-card">
       <div class="beat-title">Empath</div>
       <audio controls>
@@ -231,7 +266,6 @@
       </a>
     </div>
 
-    <!-- ANGEL -->
     <div class="beat-card">
       <div class="beat-title">Angel</div>
       <audio controls>
@@ -242,18 +276,16 @@
       </a>
     </div>
 
-    <!-- GLOCK 43X -->
     <div class="beat-card">
       <div class="beat-title">Glock 43x</div>
       <audio controls>
         <source src="glock-43x-preview.mp3" type="audio/mpeg">
       </audio>
-      <a href="glock43x-buy.html">
+      <a href="glock-43x-buy.html">
         <button class="buy-btn">Unlock Beat – $10</button>
       </a>
     </div>
 
-    <!-- BAPTISM -->
     <div class="beat-card">
       <div class="beat-title">Baptism</div>
       <audio controls>
@@ -264,7 +296,6 @@
       </a>
     </div>
 
-    <!-- THE DIVINE -->
     <div class="beat-card">
       <div class="beat-title">The Divine</div>
       <audio controls>
@@ -275,14 +306,43 @@
       </a>
     </div>
 
+    <div class="beat-card">
+      <div class="beat-title">Rick Owens Type Bih</div>
+      <audio controls>
+        <source src="rick-owenz-type-bih-preview.mp3" type="audio/mpeg">
+      </audio>
+      <a href="rick-owens-type-bih-buy.html">
+        <button class="buy-btn">Unlock Beat – $10</button>
+      </a>
+    </div>
+
+    <!-- SNOW WHITE -->
+
+    <div class="beat-card">
+      <div class="beat-title">Snow White</div>
+
+      <audio controls>
+        <source src="snow-white-preview.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="snow-white-buy.html">
+        <button class="buy-btn">
+          Unlock Beat – $10
+        </button>
+      </a>
+    </div>
+
   </div>
+
 </div>
 
 <script>
-function enterSite() {
-  document.getElementById('landing').style.display = 'none';
-  document.getElementById('main').style.display = 'block';
+
+function enterSite(){
+  document.getElementById("landing").style.display = "none";
+  document.getElementById("main").style.display = "block";
 }
+
 </script>
 
 </body>
